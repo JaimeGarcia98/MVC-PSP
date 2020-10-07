@@ -5,6 +5,7 @@
  */
 package modelovistacontrolador;
 
+import java.sql.SQLException;
 import vista.Vista;
 
 /**
@@ -16,7 +17,7 @@ public class ModeloVistaControlador {
     /**
      * @param args the command line arguments
      */
-    public static void main(String[] args) {
+    public static void main(String[] args) throws SQLException {
         // TODO code application logic here
         Vista vist = new Vista();
         vist.menu();
