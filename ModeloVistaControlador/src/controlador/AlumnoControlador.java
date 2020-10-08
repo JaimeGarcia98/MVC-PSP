@@ -33,4 +33,14 @@ public class AlumnoControlador {
         setAlumnos(alum.pedirDatosAlum());
         return getAlumnos();
     }
+    public ArrayList<Alumno> DemostrarTeoriaArray() throws SQLException{
+        Alumno alum_auxiliar = new Alumno();
+        setAlumnos(alum_auxiliar.pedirDatosAlum());
+        
+        System.out.println("Demostración Array en Controlador");
+        for (int i = 0; i < Alumnos.size(); i++){
+            System.out.println(getAlumnos());
+        }
+        return getAlumnos();
+    }
 }

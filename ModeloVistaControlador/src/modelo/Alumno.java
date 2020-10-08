@@ -5,6 +5,7 @@
  */
 package modelo;
 
+import controlador.AlumnoControlador;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.sql.Statement;
@@ -59,7 +60,7 @@ public class Alumno extends Modelo{
         public void setAlumnos(ArrayList<Alumno> Alumnos) {
             this.Alumnos = Alumnos;
         }
-        
+        //Para la demostración de los Arrays hay que comentar este método
         @Override
         public String toString() {
             return "Alumno{" + "Dni=" + Dni + ", Nombre=" + Nombre + ", Apellidos=" + Apellidos + '}';

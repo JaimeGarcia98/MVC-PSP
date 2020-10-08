@@ -51,6 +51,20 @@ public class Vista {
             System.out.println(Asigs.get(i));
         }
     }
+    public void DemostrarTeoriaArray() throws SQLException{
+        AlumnoControlador controlador_Alum = new AlumnoControlador();
+        ArrayList<Alumno> Alumnos = new ArrayList<Alumno>();
+        ArrayList<Alumno> Alumnos2 = new ArrayList<Alumno>();
+        
+        Alumnos = controlador_Alum.DemostrarTeoriaArray();
+        
+        Alumnos.remove(1);
+        System.out.println("Demostración Array en Vista");
+        for (int i = 0; i < Alumnos.size(); i++){
+            System.out.println(Alumnos);
+        }
+        Alumnos2 = controlador_Alum.DemostrarTeoriaArray();
+    }
     public void menu() throws SQLException{
         Scanner sc = new Scanner(System.in);
         int opcion =0;
@@ -64,7 +78,9 @@ public class Vista {
 
             System.out.println("3.Mostrar Asignaturas de un Alumno");
             
-            System.out.println("4.Salir");
+            System.out.println("4.Demostrar la teoría de los Arrays");
+            
+            System.out.println("5.Salir");
 
             opcion =  sc.nextInt();
             switch (opcion){
@@ -89,6 +105,11 @@ public class Vista {
                 break;
                 
                 case 4:
+                     System.out.println("Has seleccionado Demostrar los Arrays...");
+                     DemostrarTeoriaArray();
+                break;
+                
+                case 5:
                     inter = true;
                  
                 break;
